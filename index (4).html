@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Thuc hanh su dung mang </title>
+</head>
+<body>
+
+<h2> JavaScript Array </h2>
+<input id="input">
+<button onclick="add()"> ADD </button>
+<button onclick="display()"> Display </button>
+<br>
+<hr>
+<h3 id="demo2"></h3>
+	<script>
+		/*Cach 1:
+		let input = document.getElementById('input');
+		let arr = [];
+		function add(){
+			inputNum = input.value;
+			arr.push(inputNum);
+			document.getElementById('input').value = '';
+		}
+		function display(){
+		let str='';
+		for (let i = 0; i<arr.length; i++){
+			str += '<h2> Element ' + i + ' = ' + arr[i] + '</h2>';
+		}
+			document.getElementById('demo2').innerHTML = str;
+		}*/
+		
+		//Cach 2
+		let x =0;
+		let array = Array();
+		function add(){
+			array [x] = document.getElementById('input').value;
+			alert('Element: ' + array[x] + ' Added at index '+x);
+			x++;
+			document.getElementById('input').value = '';
+		}
+		
+		function display(){
+			let e = '<hr>';
+			for (let i = 0; i<array.length;i++){
+				e += 'Element ' + i + ' = ' + array[i] + '<br>';
+			}
+			document.getElementById('demo2').innerHTML = e;
+		}
+	</script>
+</body>
+</html>

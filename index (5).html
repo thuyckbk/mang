@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Thuc hanh su dung mang </title>
+</head>
+<body>
+
+<h2> JavaScript Lopps</h2>
+<button onclick="baiTap1()"> Thuc hien BT1</button>
+<h3 id="demo"></h3>
+	<script>
+	function baiTap1(){
+			let text = "";
+			let i;
+			for ( i = 0; i<5;i++){
+				text += 'The number is ' + i +'<br>';
+				
+			}
+			document.getElementById('demo').innerHTML= text;
+}
+	</script>
+<button onclick="baiTap2()"> Thuc hien BT2</button>
+<h3 id="demo2"></h3>
+	<script>
+	function baiTap2(){
+			let num = prompt('Nhap so cua ban: ');
+			let i;
+			let total = 0;
+			for ( i = 0; i<=num;i++){
+				total = total + i;
+			}
+			document.getElementById('demo2').innerHTML= total;
+}
+	</script>
+</body>
+</html>

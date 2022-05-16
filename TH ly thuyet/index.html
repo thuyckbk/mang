@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Array</title>
+</head>
+<body>
+    <!-- <script>
+        let integerArray = [4,2,6,1];
+        console.log(integerArray[2]);
+        let nameArr = new Array("quan", "huy", "hai");
+        console.log(nameArr[2]);
+        console.log(nameArr.length);
+    </script> -->
+    <!-- <script>
+        let number = [
+            [1,3,4,6,8],
+            [5,11,51,7,7,9]
+        ];
+        console.log(number);
+        for (let i = 0; i < number.length; i++) {
+            for (let j = 0; j < number[i].length; j++) {
+                console.log(number[i][j]);
+            }
+            console.log('<br>');
+        }
+    </script>
+    <div>
+        <input type="text" id="input">
+        <button id="add" onclick="add()">ADD</button>
+        <button onclick="display">Display</button>
+        <h2 id="display"></h2>
+    </div>
+    <script>
+        
+        let arr = [];
+        function add(){
+            let add = document.getElementById('input').value;
+            arr.push(add);
+        }
+        function display(){
+            let str ='';
+            for(let i =0 ; i<arr.length;i++){
+                str +="Element"+i+'='+arr[i] +'<br>';
+                
+            }
+            document.getElementById('display').innerHTML = str;
+        }
+    </script> -->
+    <div id="output"></div>
+    <script>
+
+        let alement;
+		let array = [];
+		for (let i = 0; i<10;i++){
+            array.push([])
+            for (let j=0; j<10;j++){
+			element=Math.floor(Math.random()*101);
+            array[i].push(element);
+            }
+		}
+		let max = array[0][0];
+		let indexMax = 0;
+		let min = array[0][0];
+		let indexMin = 0;
+		for (let i=0; i<array.length; i++){
+            for (let j=0; j<10;j++){
+			if (max<array[i][j]){
+				max=array[i][j];
+				//indexMax = ij;
+			}
+			if (min>array[i][j]){
+				min=array[i][j];
+				//indexMin = ij;
+			}
+		}
+    }
+        console.log(array);
+        console.log(min, max);
+        document.getElementById('output').innerHTML = array;
+	</script>
+
+</body>
+</html>

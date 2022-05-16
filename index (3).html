@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Thuc hanh tim gia tri trong mang </title>
+</head>
+<body>
+
+<!--<h2> JavaScript Array </h2>
+<input id="input">
+<button onclick="add()"> ADD </button>
+<button onclick="display()"> Display </button>
+<br>
+<hr>
+<h3 id="demo2"></h3>
+	<script>
+		/*Cach 1:
+		let input = document.getElementById('input');
+		let arr = [];
+		function add(){
+			inputNum = input.value;
+			arr.push(inputNum);
+			document.getElementById('input').value = '';
+		}
+		function display(){
+		let str='';
+		for (let i = 0; i<arr.length; i++){
+			str += '<h2> Element ' + i + ' = ' + arr[i] + '</h2>';
+		}
+			document.getElementById('demo2').innerHTML = str;
+		}*/
+		
+		//Cach 2
+		let x =0;
+		let array = Array();
+		function add(){
+			array [x] = document.getElementById('input').value;
+			alert('Element: ' + array[x] + ' Added at index '+x);
+			x++;
+			document.getElementById('input').value = '';
+		}
+		
+		function display(){
+			let e = '<hr>';
+			for (let i = 0; i<array.length;i++){
+				e += 'Element ' + i + ' = ' + array[i] + '<br>';
+			}
+			document.getElementById('demo2').innerHTML = e;
+		}
+	</script>
+	
+	<script>
+		let value = prompt('Enter a number: ');
+		let array = [-3,5,1,3,2,10,11];
+		for (i=0; i<array.length; i++){
+			if (array[i]==value){
+				alert('Value ' + array[i] + ' found at ' + i);
+			}else{
+				alert('Not founded!');
+				break;
+			}
+		}
+	</script>
+	<script>
+		let array = [-3,5,1,3,2,10,11];
+		let max = array[0];
+		let index = 0;
+		for (let i=0; i<array.length; i++){
+			if (max<array[i]){
+				max=array[i];
+				index = i;
+			}
+		}
+		alert('Max: ' + max + ' at position ' + index);
+	</script>
+	<script>
+		let array = [];
+		for (let i = 0; i<100;i++){
+			array[i]=Math.floor(Math.random()*101);
+		}
+		let max = array[0];
+		let indexMax = 0;
+		let min = array[0];
+		let indexMin = 0;
+		for (let i=0; i<array.length; i++){
+			if (max<array[i]){
+				max=array[i];
+				indexMax = i;
+			}
+			if (min>array[i]){
+				min=array[i];
+				indexMin = i;
+			}
+		}
+		alert(array);
+		alert('Max: ' + max + ' at position ' + indexMax);
+		alert('Min: ' + min + ' at position ' + indexMin);
+	</script>
+	
+	<script>
+		let array = [-3,5,1,3,2,10,11];
+		let first = 0;
+		let last = array.length-1;
+		while ( first<last){
+			let b = array[first];
+			array[first] = array [last];
+			array[last] = b;
+			first++;
+			last--;
+		}
+		alert(array);
+	</script>
+	
+	<h3> Caro Game Simple </h3>
+	<p id="carogame"></p>
+	<input type="button" value="Change Value" onclick="changeValue()">
+	
+	<script>
+		let b = document.getElementById("carogame");
+		let board = [];
+		let data = "";
+		for (let i = 0; i < 5; i++) {
+   			 board[i] = new Array(0, 0, 0, 0, 0);
+		}
+
+		for (let i = 0; i < 5; i++) {
+    		data += "<br>";
+    		for (let j = 0; j < 5; j++) {
+        	data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+    	}
+		}
+
+		data += "<br><br><input type='button' value='Change Value' onclick='changeValue()'>"
+		b.innerHTML ="<hr>"+ data;
+		function changeValue() {
+    	let positionX = prompt("X: ");
+    	let positionY = prompt("Y: ");
+    	data = "";
+    	board[positionX][positionY] = "x";
+    	for (let i = 0; i < 5; i++) {
+        data += "<br>";
+        for (let j = 0; j < 5; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+        }
+    }
+    data += "<br><br><input type='button' value='Change Value' onclick='changeValue()'>"
+    b.innerHTML = "<hr>" + data;
+}
+	</script>-->
+	
+	<h2> Type anything slowly</h2>
+	<textarea id="input" onkeydown = "replace();" cols=40 rows=10></textarea>
+	<script>
+		let text = prompt('Moi ban nhap cau ma ban muon hien thi: ');
+		let arr = text.split('');
+		let n='';
+		let input = document.getElementById('input');
+		let i,j,a;
+		function replace(){
+			a = input.value;
+			j = a.length;
+			if(j>0){
+				for (i = 0 ; i<j;i++){
+					n=n+arr[i];
+					if (i==text.length){
+						document.getElementById('input').value="";
+						n="";
+					}
+				}
+			}
+			document.getElementById('input').value=n;
+			n="";
+			setTimeout("replace()",1);
+			console.log(a);
+		}
+	</script>
+</body>
+</html>
